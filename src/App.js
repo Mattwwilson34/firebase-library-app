@@ -1,25 +1,19 @@
 import './App.css';
+import React, { useState, useEffect } from 'react';
 import Card from './Components/Card/Card';
-// import firebaseApp from './firebase';
-
-// import { getFirestore, collection, addDoc } from 'firebase/firestore';
-
-// const db = getFirestore(firebaseApp);
-
-// const addData = async () => {
-//   try {
-//     const docRef = await addDoc(collection(db, 'users'), {
-//       first: 'Ada',
-//       last: 'Lovelace',
-//       born: 1815,
-//     });
-//     console.log('Document written with ID: ', docRef.id);
-//   } catch (e) {
-//     console.error('Error adding document: ', e);
-//   }
-// };
+import fetchBooks from './fetch-books';
 
 function App() {
+  const [books, setBooks] = useState(null);
+
+  useEffect(() => {
+    (async () => {
+      const data = await fetchBooks();
+      setBooks(data);
+      console.log(books);
+    })();
+  }, []);
+
   return (
     <div className='App'>
       <Card />
