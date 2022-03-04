@@ -1,20 +1,22 @@
 import './App.css';
 import firebaseApp from './firebase';
-import { getFirestore, doc, getDoc } from 'firebase/firestore';
+import { getFirestore, collection, addDoc } from 'firebase/firestore';
 
 const db = getFirestore(firebaseApp);
-const docRef = doc(db, 'test', 'test1');
-const getData = async () => {
-  const docSnap = await getDoc(docRef);
 
-  if (docSnap.exists()) {
-    console.log('Document data:', docSnap.data());
-  } else {
-    // doc.data() will be undefined in this case
-    console.log('No such document!');
+const addData = async () => {
+  try {
+    const docRef = await addDoc(collection(db, 'users'), {
+      first: 'Ada',
+      last: 'Lovelace',
+      born: 1815,
+    });
+    console.log('Document written with ID: ', docRef.id);
+  } catch (e) {
+    console.error('Error adding document: ', e);
   }
 };
-getData();
+addData();
 
 function App() {
   return <div className='App'>Firebase Library</div>;
