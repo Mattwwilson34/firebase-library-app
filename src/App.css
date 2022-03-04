@@ -1,0 +1,16 @@
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100vh;
+}
+
+.Card {
+  padding: 1rem;
+  width: 20rem;
+  border: 3px solid hotpink;
+}
