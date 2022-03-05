@@ -1,3 +1,8 @@
+@font-face {
+  font-family: 'Nunito-Italic-VariableFont_wght';
+  src: url('./font/Russo_One/Nunito-Italic-VariableFont_wght.ttf');
+}
+
 *,
 *:before,
 *:after {
@@ -7,10 +12,11 @@
 html,
 body {
   height: 100vh;
+  font-family: 'Nunito-Italic-VariableFont_wght';
 }
 
 .Card {
   padding: 1rem;
-  width: 20rem;
-  border: 3px solid hotpink;
+  width: 50ch;
+  border: 3px solid black;
 }
