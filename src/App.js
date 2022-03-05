@@ -15,13 +15,23 @@ function App() {
     })();
   }, []);
 
+  const handleReadButtonClick = (e) => {
+    console.log('Button Clicked');
+  };
+
   return (
     <div className='App'>
       {loading ? (
         <div>Loading...</div>
       ) : (
         books.map((book, i) => {
-          return <Card key={i} book={book} />;
+          return (
+            <Card
+              key={i}
+              book={book}
+              handleReadButtonClick={handleReadButtonClick}
+            />
+          );
         })
       )}
     </div>
