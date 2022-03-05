@@ -24,7 +24,6 @@ body {
 .Card {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
   width: clamp(5ch, 40ch, 50ch);
   border: 3px solid black;
   border-radius: 0.25rem;
@@ -55,6 +54,8 @@ p {
 }
 
 .Button_Read {
+  margin-top: auto;
+  height: 2rem;
   border-style: none;
   width: 100%;
   opacity: 0.7;
@@ -62,4 +63,14 @@ p {
 .Button_Read:hover {
   cursor: pointer;
   opacity: 1;
+}
+
+.Button_Add_Info {
+  height: 2rem;
+  border-style: none;
+  width: 100%;
+}
+
+.Button_Add_Info:hover {
+  cursor: pointer;
 }
