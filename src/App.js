@@ -1,7 +1,7 @@
 import './App.css';
 import React, { useState, useEffect } from 'react';
 import Card from './Components/Card/Card';
-import fetchBooks from './fetch-books';
+import fetchBooks, { updateBook } from './fetch-books';
 
 function App() {
   const [books, setBooks] = useState(null);
@@ -16,7 +16,8 @@ function App() {
   }, []);
 
   const handleReadButtonClick = (e) => {
-    console.log('Button Clicked');
+    const bookTitle = e.target.parentElement.children[0].textContent;
+    updateBook(bookTitle);
   };
 
   return (
