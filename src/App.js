@@ -12,7 +12,6 @@ function App() {
       const data = await fetchBooks();
       setBooks(data);
       setLoading(false);
-      console.log(books);
     })();
   }, []);
 

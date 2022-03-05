@@ -15,8 +15,38 @@ body {
   font-family: 'Nunito-Italic-VariableFont_wght';
 }
 
+.App {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+}
+
 .Card {
-  padding: 1rem;
-  width: 50ch;
+  width: clamp(20ch, 40ch, 50ch);
   border: 3px solid black;
+  border-radius: 0.25rem;
+  box-shadow: rgba(0, 0, 0, 0.09) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px,
+    rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px,
+    rgba(0, 0, 0, 0.09) 0px 32px 16px;
+}
+
+.Card h2 {
+  margin: 0;
+  height: clamp(3rem, 6rem, 10rem);
+}
+
+.Card h2,
+h3,
+h4,
+p {
+  margin: 0;
+  padding: 1rem;
+}
+
+.Card_Title {
+  background-color: rgb(154, 218, 252);
+}
+
+.Card_Add_Info_Container {
+  display: none;
 }
