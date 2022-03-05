@@ -20,8 +20,8 @@ function App() {
       {loading ? (
         <div>Loading...</div>
       ) : (
-        books.map((book) => {
-          return <Card book={book} />;
+        books.map((book, i) => {
+          return <Card key={i} book={book} />;
         })
       )}
     </div>

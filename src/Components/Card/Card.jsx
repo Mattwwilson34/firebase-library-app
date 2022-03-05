@@ -17,9 +17,9 @@ const Card = (props) => {
       <h2 className='Card_Title'>{title}</h2>
       <h3 className='Card_Subtitle'>{subtitle}</h3>
       <h4 className='Card_Author'>By: {author}</h4>
-      <p className='Card_Description'>{description}</p>
-      <Button text='Read' handleClick='handleClick' />
+      <Button text='Read' handleClick='handleClick' className='Button_Read' />
       <div class='Card_Add_Info_Container'>
+        <p className='Card_Description'>{description}</p>
         <p className='Card_Pages'>{pages}</p>
         <p className='Card_ISBN'>{isbn}</p>
         <p className='Card_published'>{published}</p>

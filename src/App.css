@@ -22,7 +22,10 @@ body {
 }
 
 .Card {
-  width: clamp(20ch, 40ch, 50ch);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: clamp(5ch, 40ch, 50ch);
   border: 3px solid black;
   border-radius: 0.25rem;
   box-shadow: rgba(0, 0, 0, 0.09) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px,
@@ -49,4 +52,14 @@ p {
 
 .Card_Add_Info_Container {
   display: none;
+}
+
+.Button_Read {
+  border-style: none;
+  width: 100%;
+  opacity: 0.7;
+}
+.Button_Read:hover {
+  cursor: pointer;
+  opacity: 1;
 }

@@ -1,6 +1,8 @@
+import '../../App.css';
+
 const Button = (props) => {
-  const { text } = props;
-  return <button>{text}</button>;
+  const { text, className } = props;
+  return <button className={className}>{text}</button>;
 };
 
 export default Button;
