@@ -1,19 +1,10 @@
 import '../../App.css';
 import Button from '../Button/Button';
 import React, { useState } from 'react';
+import Collapsable from '../Collapsable/Collapsable';
 
 const Card = (props) => {
-  const {
-    title,
-    subtitle,
-    author,
-    description,
-    isbn,
-    pages,
-    published,
-    website,
-    read,
-  } = props.book;
+  const { title, subtitle, author, read } = props.book;
   const { handleReadButtonClick } = props;
 
   const [alreadyRead, setAlreadyRead] = useState(read);
@@ -32,14 +23,7 @@ const Card = (props) => {
           setAlreadyRead(!alreadyRead);
         }}
       />
-      <Button className='Button_Add_Info' text='Additional Info' />
-      <div className='Card_Add_Info_Container'>
-        <p className='Card_Description'>{description}</p>
-        <p className='Card_Pages'>{pages}</p>
-        <p className='Card_ISBN'>{isbn}</p>
-        <p className='Card_published'>{published}</p>
-        <p className='Card_Website'>{website}</p>
-      </div>
+      <Collapsable book={props.book} />
     </div>
   );
 };
