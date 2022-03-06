@@ -18,12 +18,14 @@ body {
 .App {
   display: flex;
   flex-wrap: wrap;
+  flex-grow: 0;
   gap: 2rem;
 }
 
 .Card {
   display: flex;
   flex-direction: column;
+  align-self: flex-start;
   width: clamp(5ch, 40ch, 50ch);
   border: 3px solid black;
   border-radius: 0.25rem;
@@ -42,7 +44,7 @@ h3,
 h4,
 p {
   margin: 0;
-  padding: 1rem;
+  padding: 0.5rem 1rem;
 }
 
 .Card_Title {
@@ -84,4 +86,8 @@ p {
 
 .show {
   max-height: 800px;
+}
+
+.Bold {
+  font-size: 1.1rem;
 }

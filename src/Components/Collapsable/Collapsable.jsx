@@ -11,11 +11,23 @@ const Collapsable = (props) => {
         expand Info
       </button>
       <div className={isOpen ? 'content show' : 'content'}>
-        <p className='Card_Description'>{description}</p>
-        <p className='Card_Pages'>{pages}</p>
-        <p className='Card_ISBN'>{isbn}</p>
-        <p className='Card_published'>{published}</p>
-        <p className='Card_Website'>{website}</p>
+        <p className='Card_Description'>
+          <span className='Bold'>Description:</span>
+          <br></br>
+          {description}
+        </p>
+        <p className='Card_Pages'>
+          <span className='Bold'>Pages:</span> {pages}
+        </p>
+        <p className='Card_ISBN'>
+          <span className='Bold'>ISBN:</span> {isbn}
+        </p>
+        <p className='Card_published'>
+          <span className='Bold'>Published:</span> {published}
+        </p>
+        <p className='Card_Website'>
+          <span className='Bold'>Website:</span> {website}
+        </p>
       </div>
     </div>
   );
